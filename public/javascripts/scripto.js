@@ -1,6 +1,6 @@
 var canvas, context, angle = 0, time= 20, paused = false, timer  =0,color="red";
-localStorage.x=20;
-localStorage.y=20;
+localStorage.x;
+localStorage.y;
 var a;
 var b;
 var dx=-5;
@@ -55,8 +55,10 @@ function initialise() {
   
 //    localStorage.setItem("x", x);
 //    localStorage.setItem("y", y);
-
-
+if(!localStorage.x)
+{localStorage.x=0;
+localStorage.y=0;
+ }
   timer = setInterval(draw, time);
 }
 
