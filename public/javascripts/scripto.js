@@ -22,6 +22,8 @@ function togglePause() {
     a=localStorage.x;
     b=localStorage.y;
     console.log(a);
+    document.getElementById("xer").innerHTML = "Value of X Coordinate: "+ a;
+    document.getElementById("yer").innerHTML = "Value of Y Coordinate: "+ b;
   } else {
     //setting the recorded value to the new position of the ball
     localStorage.x=a;
