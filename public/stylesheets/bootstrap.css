@@ -5,12 +5,14 @@
  */
 
 /*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+
 html {
   font-family: sans-serif;
   -webkit-text-size-adjust: 100%;
       -ms-text-size-adjust: 100%;
 }
 body {
+  color: grey;
   margin: 0;
 }
 article,
@@ -32,8 +34,16 @@ audio,
 canvas,
 progress,
 video {
+
   display: inline-block;
   vertical-align: baseline;
+	border-style: solid;
+	border-color: #8b8282;
+	float: none;
+	clear: none;
+	margin-right: 8px;
+	margin-top: 18px;
+	padding-top: 2px;
 }
 audio:not([controls]) {
   display: none;
