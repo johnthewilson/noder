@@ -18,24 +18,17 @@
 
       if ("WebSocket" in window) {
         log("WebSocket is supported by your Browser!")
+       
+        var some = "wss://npu-noder.herokuapp.com";
 
-        var protocol = 'ws:';
-
-        if (location.protocol.startsWith('https')){
-          protocol = 'wss:'
-          log("Using wss protocol. (secured)");
-        } else {
-          log("Using ws protocol.");
-        }
-        
-        var ws = new WebSocket(protocol + "//" + npu-noder.herokuapp.com, 'echo-protocol');
+        var ws = new WebSocket(some, 'echo-protocol');
 
         ws.onopen = function() {
-          var msg = "Hello!";
+          var msg = "Howdy !";
 
           ws.send(msg);
 
-          log("Message is sent: " + msg)
+          alert("Message is sent: " + msg)
         };
 
         ws.onmessage = function (evt) {
