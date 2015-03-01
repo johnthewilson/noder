@@ -27,8 +27,8 @@
         } else {
           log("Using ws protocol.");
         }
-        var server ="wss://npu-noder.herokuapp.com";
-        var ws = new WebSocket(server, 'echo-protocol');
+        
+        var ws = new WebSocket(protocol + "//" + npu-noder.herokuapp.com, 'echo-protocol');
 
         ws.onopen = function() {
           var msg = "Hello!";
